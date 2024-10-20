@@ -1,10 +1,14 @@
 {
   "name": "create-discora",
   "description": "",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "bin": {
+    "create-discora": "./dist/index.js"
+  },
   "scripts": {
-    "test": "./dom"
+    "build": "tsc",
+    "start": "npm run build && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +18,10 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@types/node": "^22.7.7"
+    "@clack/core": "^0.3.4",
+    "@clack/prompts": "^0.7.0",
+    "@types/node": "^22.7.7",
+    "chalk": "^5.3.0",
+    "picocolors": "^1.1.1"
   }
 }
